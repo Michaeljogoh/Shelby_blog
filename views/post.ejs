@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<% posts.forEach(function(post){ %>
+  <% console.log(post.comment) %>
+    <p><%= post.comment %></p><a href="/delete/<%=post._id%>"><i class="far fa-trash-alt">Delete Comment</i></a>
+    <em>posted by <%= post.commenter %> <%= post.date %> </em>
+    <hr>
+<%})%>
+<form action="/form3/<%= requestedPost %>" method="POST">
+<p><textarea name="comment" id="" cols="40" rows="5" placeholder="post a comment"></textarea></p>
+<p><input type="text" name="commenter" id="" placeholder="firstname"></p>
+<input type="email" name="comment_email" id="" placeholder="email address">
+<input type="submit" value="submit">
+</form>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,49 @@
+
+ <%- include('partials/header') %>
+
+<a href="/forms">Create Topic and room</a>
+<div class=" box heading">
+ <h1>The Shelby Blog || Home</h1>
+</div>
+      
+<div class="box">
+   <% rooms.forEach(function(room){ %>
+
+            <div class="item">
+              
+      
+
+                  <%= room.room_name %>
+               
+                 
+     
+
+
+            </div>
+            <% }) %>
+ 
+
+</div>
+<%- include('partials/footer') %>
+ 
+
+
+            <div class="box">
+
+<% topics.forEach(function(topic){ %>
+      
+      <h2><a href="/post/<%=topic.topic_name%>"><%=topic.topic_name%></a></h2>
+      <hr>
+<% }) %>
+</div>
+
+
+   
+<ul>
+  
+    
+      
+    </ul>
+
+
+    <%- include('partials/footer') %>

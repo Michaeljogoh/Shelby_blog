@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/styles.css">
+
+<a href="/forms">Create Topic and room</a>
+<div class=" box heading">
+
+ <h1>The Shelby Blog || Home</h1>
+</div>
+      
+<div class="box">
+
+
+            <div class="item">
+
+              <%  posts.forEach(function(post){ %>
+
+                <p><%= post.comment %></p>
+                    <em>posted by <% post.commenter %> <%= post.date %> </em>
+                    
+               <% }) %>
+              
+      
+
+                  <%= posts %>
+               
+                 
+     
+
+
+            </div>
+        
+
+
+</div>
+<%- include('partials/footer') %>

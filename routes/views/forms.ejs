@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+    <h1>Create Room</h1>
+    <form action="/form1" method="POST">
+        <input type="text" name="room_name" id="">
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <h1>Create Topic</h1>
+    <form action="/form2" method="POST">
+        <input type="text" name="topic_name" id="">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Create Comments</h1>
+    <form action="/form3" method="POST">
+        <input type="text" name="comment" id="">
+        <input type="text" name="commenter" id="" placeholder="Firstname">
+        
+        <p>
+
+        <select name="topic_name" id="">
+            
+            <% topics.forEach(function(topic){ %>
+                <option value="<%= topic.topic_name %>"><%= topic.topic_name %></option>
+
+           <%  }) %>
+           
+
+
+
+        </select>
+        </p>
+
+
+
+        <input type="email" name="comment_email" id="" placeholder="Email">
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %>
